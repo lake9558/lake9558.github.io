@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>使用 Linux 安全删除工具 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="删除和格式化  普通 Linux 用户删除磁盘数据的常规方法主要有：删除和格式化。 “删除”是删除数据最便捷的方法，如 Linux 用户最经常采用“rm”删除命令。实际上并没有真正的将数据从硬盘上删除，只是将文件的索引删除而已，让操作系统和使用者认为文件已经删除，又可以把腾出空间存储新的数据。这种方法是最不安全的，只能欺骗普通使用者，但也是大家所熟知的。数据恢复极易恢复此类不见的数据，而且也有很多">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Linux 安全删除工具">
+<meta property="og:url" content="http://yoursite.com/2019/07/16/使用-Linux-安全删除工具/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="删除和格式化  普通 Linux 用户删除磁盘数据的常规方法主要有：删除和格式化。 “删除”是删除数据最便捷的方法，如 Linux 用户最经常采用“rm”删除命令。实际上并没有真正的将数据从硬盘上删除，只是将文件的索引删除而已，让操作系统和使用者认为文件已经删除，又可以把腾出空间存储新的数据。这种方法是最不安全的，只能欺骗普通使用者，但也是大家所熟知的。数据恢复极易恢复此类不见的数据，而且也有很多">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-16T04:07:53.796Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用 Linux 安全删除工具">
+<meta name="twitter:description" content="删除和格式化  普通 Linux 用户删除磁盘数据的常规方法主要有：删除和格式化。 “删除”是删除数据最便捷的方法，如 Linux 用户最经常采用“rm”删除命令。实际上并没有真正的将数据从硬盘上删除，只是将文件的索引删除而已，让操作系统和使用者认为文件已经删除，又可以把腾出空间存储新的数据。这种方法是最不安全的，只能欺骗普通使用者，但也是大家所熟知的。数据恢复极易恢复此类不见的数据，而且也有很多">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-使用-Linux-安全删除工具" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/16/使用-Linux-安全删除工具/" class="article-date">
+  <time datetime="2019-07-16T03:31:40.000Z" itemprop="datePublished">2019-07-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用 Linux 安全删除工具
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="删除和格式化"><a href="#删除和格式化" class="headerlink" title="删除和格式化"></a>删除和格式化</h2><p>  普通 Linux 用户删除磁盘数据的常规方法主要有：删除和格式化。</p>
+<p>“删除”是删除数据最便捷的方法，如 Linux 用户最经常采用“rm”删除命令。实际上并没有真正的将数据从硬盘上删除，只是将文件的索引删除而已，让操作系统和使用者认为文件已经删除，又可以把腾出空间存储新的数据。这种方法是最不安全的，只能欺骗普通使用者，但也是大家所熟知的。数据恢复极易恢复此类不见的数据，而且也有很多专门进行数据恢复的软件。<br> “格式化”有许多不同的含义：物理的或低级格式化、操作系统的格式化、快速格式化、分区格式化等等…大多数情况下，普通用户采用的格式化不会影响到硬盘上的数据。格式化仅仅是为操作系统创建一个全新的空的文件索引，将所有的扇区标记为“未使用”的状态，让操作系统认为硬盘上没有文件。因此，格式化后的硬盘数据也是能够恢复的，也就意味着数据的不安全。</p>
+<hr>
+<h2 id="安全删除工具的工作原理"><a href="#安全删除工具的工作原理" class="headerlink" title="安全删除工具的工作原理"></a>安全删除工具的工作原理</h2><p>  由于磁盘可以重复使用，前面的数据被后面的数据覆盖后，前面的数据被还原的可能性就大大降低了，随着被覆盖次数的增多，能够被还原的可能性就趋于 0，但相应的时间支出也就越多。密级要求的高低对应着不同的标准，低密级要求的就是一次性将磁盘全部覆盖；高密级要求则须进行多次多规则覆盖。 通常有两个参考标准： 美国国防部 DOD 的 5220.22M 标准；北约 NATO 的标准 。参考标准实质就是多次覆盖的标准，规定了覆盖数据的次数，覆盖数据的形式。</p>
+<hr>
+<h2 id="覆盖原理（overwriting）"><a href="#覆盖原理（overwriting）" class="headerlink" title="覆盖原理（overwriting）"></a>覆盖原理（overwriting）</h2><p>  覆盖是指使用预先定义的格式——无意义、无规律的信息来覆盖硬盘上原先存储的数据。这是销毁数据的既有效又可操作的方法。如果数据被“成功”的完全覆盖，即使只覆盖一次，也可以认为数据是不可恢复的。硬盘上的数据都是以二进制的“1”和“0”形式存储的。完全覆盖后也就无法知道原先的数据是“1”还是“0”了，也就达到了清除数据的目的。</p>
+<h2 id="覆盖的方法：-根据覆盖时的具体顺序，软件覆盖分为逐位覆盖、跳位覆盖、随机覆盖等模式，根据时间、密级的不同要求，可组合使用上述模式，可靠的专业清除软件应同时支持多种模式。"><a href="#覆盖的方法：-根据覆盖时的具体顺序，软件覆盖分为逐位覆盖、跳位覆盖、随机覆盖等模式，根据时间、密级的不同要求，可组合使用上述模式，可靠的专业清除软件应同时支持多种模式。" class="headerlink" title="  覆盖的方法： 根据覆盖时的具体顺序，软件覆盖分为逐位覆盖、跳位覆盖、随机覆盖等模式，根据时间、密级的不同要求，可组合使用上述模式，可靠的专业清除软件应同时支持多种模式。"></a>  覆盖的方法： 根据覆盖时的具体顺序，软件覆盖分为逐位覆盖、跳位覆盖、随机覆盖等模式，根据时间、密级的不同要求，可组合使用上述模式，可靠的专业清除软件应同时支持多种模式。</h2><h2 id="shred简介"><a href="#shred简介" class="headerlink" title="shred简介"></a>shred简介</h2><p>  shred 功能简单的说就是涂鸦，把一个文件用随机的字符码篡改的一塌糊涂。其宗旨就是更安全地帮助删除一个机密文件。shred 命令的功能是重复覆盖文件，使得即使是昂贵的硬件探测仪器也难以将数据复原，这条命令的功能足够适合实现文件粉碎的功效。</p>
+<hr>
+<h2 id="shred使用方法"><a href="#shred使用方法" class="headerlink" title="shred使用方法"></a>shred使用方法</h2><p>  首先安装：</p>
+<h1 id="apt-get-install-coreutils"><a href="#apt-get-install-coreutils" class="headerlink" title="apt-get install coreutils"></a>apt-get install coreutils</h1><p>命令格式： shred [ 选项 ]… 文件 …</p>
+<p>长选项必须使用的参数对于短选项时也是必需使用的。</p>
+<p>  -f, –force  必要时修改权限以使目标可写</p>
+<p>  -n, –iterations=N  覆盖 N 次，而非使用默认的 3 次</p>
+<pre><code>--random-source= 文件   从指定文件中取出随机字节</code></pre><p>  -s, –size=N  粉碎数据为指定字节的碎片</p>
+<p>  -u, –remove  覆盖后截断并删除文件</p>
+<p>  -v, –verbose  显示详细信息</p>
+<p>  -x, –exact  不将文件大小增加至最接近的块大小</p>
+<p>  -z, –zero  最后一次使用 0 进行覆盖以隐藏覆盖动作</p>
+<p>应用实例：</p>
+<p>使用方法举例如下：</p>
+<p>粉碎一个名为 test.txt 的文件命令是：</p>
+<p>$shred –u test.txt</p>
+<p>粉碎多个文件的命令是：</p>
+<p>$shred –u test1.txt test2.txt</p>
+<p>覆盖 IDE 接口的第一个磁盘设备的第一分区</p>
+<p>$shred /dev/hda0</p>
+<p>覆盖 RAID 分区</p>
+<h2 id="shred-vfz-n-10-dev-md1"><a href="#shred-vfz-n-10-dev-md1" class="headerlink" title="$ shred -vfz -n 10 /dev/md1"></a>$ shred -vfz -n 10 /dev/md1</h2><h2 id="使用-wipe"><a href="#使用-wipe" class="headerlink" title="使用 wipe"></a>使用 wipe</h2><p>  wipe 使用 gutmann 方式，它的理论依据是 1996 年奥克兰大学计算机科学学院皮特 . 古特曼教授在第六届 usenix 安全会议上所作的论文，《安全删除磁固存储器上的数据》 <a href="http://www.cs.auckland.ac.nz/~pgut001/pubs/secur_del.html" target="_blank" rel="noopener">http://www.cs.auckland.ac.nz/~pgut001/pubs/secur_del.html</a> 。这是迄今为止最安全的数据删除方法，覆盖数据 35 次使得任何还原数据的企图都是徒劳的。 wipe 采用了重复写上 34 次以随机数生成数据的 gutmann 方式，清除的对象可以是单一档案、数据夹和整个硬盘。随着硬盘容量愈来愈大，重写时间也会愈来愈长，所以 wipe 也提供了只重复写入 4 次的快速模式。<br>  首先安装：</p>
+<p>#apt-get install wipe<br>使用方法举例如下：</p>
+<p>删除一个文件，如需对某个机密的文件进行安全删除，您可以执行以下命令：</p>
+<p>#wipe file.txt<br>删除目录， wipe 也支持对目录进行安全删除操作，您只需添加 r 选项即可，例如：</p>
+<p>#wipe -r /home/user/test/<br>删除整个分区， wipe 也支持对分区例如：</p>
+<h1 id="wipe-dev-sdb1"><a href="#wipe-dev-sdb1" class="headerlink" title="wipe /dev/sdb1"></a>wipe /dev/sdb1</h1><hr>
+<h2 id="使用-secure-delete-软件包"><a href="#使用-secure-delete-软件包" class="headerlink" title="使用 secure-delete 软件包"></a>使用 secure-delete 软件包</h2><p>  secure-delete 软件包简介<br>secure-delete 软件包包含一些安全删除工具，这些工具能够安全清除文件数据、释放磁盘空间、交换分区和内存。 secure-delete 软件包中包含下列命令：</p>
+<p>srm(secure remove) – 用于安全删除硬盘上现有的文件或者目录。</p>
+<p>sdmem(secure memory wiper) – 用于清除计算机内存 (ram) 的数据痕迹。</p>
+<p>sfill(secure free space wiper) – 用于清除磁盘可用空间的数据痕迹。</p>
+<p>sswap(secure swap wiper) – 用于删除交换区所有数据痕迹。</p>
+<p>安装 secure-delete 软件包<br>在 Ubuntu 中安装 secure-delete 工具，需要运行下列命令：</p>
+<p>#apt-get install secure-delete</p>
+<hr>
+<h2 id="使用-srm-命令"><a href="#使用-srm-命令" class="headerlink" title="使用 srm 命令"></a>使用 srm 命令</h2><p>  srm 通过覆盖、重命名和 unlink 前截断数据来删除指定的文件，这可以防止其他人利用命令恢复或复原文件。</p>
+<p>srm 命令格式：srm [-d] [-f] [-l] [-l] [-r] [-v] [-z]选项-d 忽略(与 rm 的兼容性)-r, -R, –recursive 递归地移除目录内容-f 快速模式(即不安全模式)-l 降低安全性模式。-l -l 再次降低安全性模式。-v 详细模式-z, –zero 覆盖文件后，文件使用的 zero 块应用实例：<br>使用 rm 删除一个文件：</p>
+<p>#rm myfile.txt<br>使用 srm 删除一个文件：</p>
+<p>#srm -r myfiles </p>
+<hr>
+<h2 id="使用-sdmem-命令"><a href="#使用-sdmem-命令" class="headerlink" title="使用 sdmem 命令"></a>使用 sdmem 命令</h2><p>  sdmem （ Secure memory wiper 安全内存擦除器）可以删除以内存的数据，使数据不能被黑客恢复。</p>
+<p>smem 命令格式： smem [-f] [-l] [-l] [-v]</p>
+<p>选项：</p>
+<p>-f 快速模式(即不安全模式)</p>
+<p>-l 降低安全性模式。</p>
+<p>-l -l 再次降低安全性模式。</p>
+<p>-v 详细模式</p>
+<p>应用实例：</p>
+<p>使用详细模式删除内存的数据</p>
+<p>#sdmem –v</p>
+<hr>
+<p>##使用 sfill 命令<br>  sfill （ secure free space wipe ）可用空间擦除命令可以删除在所有可用空间上的数据。</p>
+<p>sfill 命令格式： sfill [-f] [-i] [-i] [-l] [-l] [-v] [-z] directory/mountpoint</p>
+<p>选项</p>
+<p>f 快速 ( 和不安全模式 )</p>
+<p>-i 仅清除可用 inode 空间，而不是可用磁盘空间</p>
+<p>-i 仅清除可用磁盘空间，而不是可用 inode 空间</p>
+<p>-l - 降低安全性。</p>
+<p>-l -l 再次降低了安全性：</p>
+<p>-v - 详细模式</p>
+<p>-z – 使用 0 擦除最后的写入，而不是随机数据</p>
+<p>directory/mountpoint 是在文件系统中用户所创建的文件的位置，位于用户想写入的分区。</p>
+<p>应用实例：</p>
+<p>使用详细模式可用空间一个目录的可用空间</p>
+<p>#sfill -v /cjh1/</p>
+<hr>
+<h2 id="使用-sswap-命令"><a href="#使用-sswap-命令" class="headerlink" title="使用 sswap 命令"></a>使用 sswap 命令</h2><p>  sswap（secure swap wiper）安全交换分区擦除器可以删除以安全方式存在于 swap 空间的数据。</p>
+<p>sswap 命令格式：sswap [-f] [-l] [-l] [-v] [-z] swapdevice</p>
+<p>选项</p>
+<p>-f 快速模式(即不安全模式)</p>
+<p>-l 降低安全性。</p>
+<p>-l -l 再次降低了安全性。</p>
+<p>-v 详细模式</p>
+<p>-z - 使用 0 擦除最后的写入，而不是随机数据</p>
+<p>应用实例：</p>
+<p>在开始使用 sswap 前，您必须禁用 swap 分区，可以使用下列命令来查看安装的 swap 设备：</p>
+<p>#cat /proc/swaps<br>使用下列命令禁用 swap ：</p>
+<p>#swapoff /dev/sda3<br>/dev/sda3 – 这是我的 swap 设备</p>
+<p>禁用 swap 设备后，就可以使用下列命令用 sswap 擦除它：</p>
+<p>#sswap /dev/sda3<br>完成上述命令后，需要使用下列命令重新启用 swap ：</p>
+<p>#swapon /dev/sda3</p>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/07/16/使用-Linux-安全删除工具/" data-id="cjy5g7w9l00039zow6hcfupyu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/17/湖光水色调-i2star/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          湖光水色调-i2star
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/16/Ubuntu-linux挂载、卸载及格式化U盘/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Ubuntu-linux挂载、卸载及格式化U盘</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/音乐/">音乐</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/音乐/" style="font-size: 10px;">音乐</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/17/湖光水色调-i2star/">湖光水色调-i2star</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/16/使用-Linux-安全删除工具/">使用 Linux 安全删除工具</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/16/Ubuntu-linux挂载、卸载及格式化U盘/">Ubuntu-linux挂载、卸载及格式化U盘</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/16/ubuntu下添加交换空间/">ubuntu下添加交换空间</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
