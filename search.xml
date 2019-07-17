@@ -4,6 +4,9 @@
     <title><![CDATA[当真-钢琴弹唱]]></title>
     <url>%2F2019%2F07%2F18%2F%E5%BD%93%E7%9C%9F-%E9%92%A2%E7%90%B4%E5%BC%B9%E5%94%B1%2F</url>
     <content type="text"><![CDATA[]]></content>
+      <tags>
+        <tag>视频</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[一曲相思]]></title>
@@ -13,7 +16,7 @@
   <entry>
     <title><![CDATA[心的旅程-SNH48]]></title>
     <url>%2F2019%2F07%2F17%2F%E5%BF%83%E7%9A%84%E6%97%85%E7%A8%8B-SNH48%2F</url>
-    <content type="text"><![CDATA[var ap = new APlayer({ element: document.getElementById("aplayer-JfmqvuVU"), narrow: false, autoplay: true, showlrc: false, music: { title: "心的旅程", author: "SNH48", url: "http://so.sycdn.kuwo.cn/105f0250c2ec7a1c300e5f239fedadfc/5d2cdaed/resource/n3/55/36/1462618488.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
+    <content type="text"><![CDATA[var ap = new APlayer({ element: document.getElementById("aplayer-PFVUXhOn"), narrow: false, autoplay: true, showlrc: false, music: { title: "心的旅程", author: "SNH48", url: "http://so.sycdn.kuwo.cn/105f0250c2ec7a1c300e5f239fedadfc/5d2cdaed/resource/n3/55/36/1462618488.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
       <tags>
         <tag>音乐</tag>
       </tags>
