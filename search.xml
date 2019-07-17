@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[当真-钢琴弹唱]]></title>
+    <url>%2F2019%2F07%2F17%2F%E5%BD%93%E7%9C%9F-%E9%92%A2%E7%90%B4%E5%BC%B9%E5%94%B1%2F</url>
+    <content type="text"><![CDATA[这是一首很酷的钢琴弹唱——The &lt;video&gt; tag is not supported by your browser.]]></content>
+      <tags>
+        <tag>视频</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[一曲相思]]></title>
+    <url>%2F2019%2F07%2F17%2F%E4%B8%80%E6%9B%B2%E7%9B%B8%E6%80%9D%2F</url>
+    <content type="text"><![CDATA[The `` tag is not supported by your browser.]]></content>
+      <tags>
+        <tag>视频</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[心的旅程-SNH48]]></title>
+    <url>%2F2019%2F07%2F17%2F%E5%BF%83%E7%9A%84%E6%97%85%E7%A8%8B-SNH48%2F</url>
+    <content type="text"><![CDATA[var ap = new APlayer({ element: document.getElementById("aplayer-HKIelbWS"), narrow: false, autoplay: true, showlrc: false, music: { title: "心的旅程", author: "SNH48", url: "http://so.sycdn.kuwo.cn/105f0250c2ec7a1c300e5f239fedadfc/5d2cdaed/resource/n3/55/36/1462618488.mp3", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
+      <tags>
+        <tag>音乐</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[湖光水色调-i2star]]></title>
+    <url>%2F2019%2F07%2F17%2F%E6%B9%96%E5%85%89%E6%B0%B4%E8%89%B2%E8%B0%83-i2star%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <tags>
+        <tag>音乐</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[燕池]]></title>
+    <url>%2F2019%2F07%2F16%2F%E7%87%95%E6%B1%A0%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <tags>
+        <tag>图片</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用 Linux 安全删除工具]]></title>
+    <url>%2F2019%2F07%2F16%2F%E4%BD%BF%E7%94%A8-Linux-%E5%AE%89%E5%85%A8%E5%88%A0%E9%99%A4%E5%B7%A5%E5%85%B7%2F</url>
+    <content type="text"><![CDATA[删除和格式化 普通 Linux 用户删除磁盘数据的常规方法主要有：删除和格式化。 “删除”是删除数据最便捷的方法，如 Linux 用户最经常采用“rm”删除命令。实际上并没有真正的将数据从硬盘上删除，只是将文件的索引删除而已，让操作系统和使用者认为文件已经删除，又可以把腾出空间存储新的数据。这种方法是最不安全的，只能欺骗普通使用者，但也是大家所熟知的。数据恢复极易恢复此类不见的数据，而且也有很多专门进行数据恢复的软件。 “格式化”有许多不同的含义：物理的或低级格式化、操作系统的格式化、快速格式化、分区格式化等等…大多数情况下，普通用户采用的格式化不会影响到硬盘上的数据。格式化仅仅是为操作系统创建一个全新的空的文件索引，将所有的扇区标记为“未使用”的状态，让操作系统认为硬盘上没有文件。因此，格式化后的硬盘数据也是能够恢复的，也就意味着数据的不安全。 安全删除工具的工作原理 由于磁盘可以重复使用，前面的数据被后面的数据覆盖后，前面的数据被还原的可能性就大大降低了，随着被覆盖次数的增多，能够被还原的可能性就趋于 0，但相应的时间支出也就越多。密级要求的高低对应着不同的标准，低密级要求的就是一次性将磁盘全部覆盖；高密级要求则须进行多次多规则覆盖。 通常有两个参考标准： 美国国防部 DOD 的 5220.22M 标准；北约 NATO 的标准 。参考标准实质就是多次覆盖的标准，规定了覆盖数据的次数，覆盖数据的形式。 覆盖原理（overwriting） 覆盖是指使用预先定义的格式——无意义、无规律的信息来覆盖硬盘上原先存储的数据。这是销毁数据的既有效又可操作的方法。如果数据被“成功”的完全覆盖，即使只覆盖一次，也可以认为数据是不可恢复的。硬盘上的数据都是以二进制的“1”和“0”形式存储的。完全覆盖后也就无法知道原先的数据是“1”还是“0”了，也就达到了清除数据的目的。 覆盖的方法： 根据覆盖时的具体顺序，软件覆盖分为逐位覆盖、跳位覆盖、随机覆盖等模式，根据时间、密级的不同要求，可组合使用上述模式，可靠的专业清除软件应同时支持多种模式。shred简介 shred 功能简单的说就是涂鸦，把一个文件用随机的字符码篡改的一塌糊涂。其宗旨就是更安全地帮助删除一个机密文件。shred 命令的功能是重复覆盖文件，使得即使是昂贵的硬件探测仪器也难以将数据复原，这条命令的功能足够适合实现文件粉碎的功效。 shred使用方法 首先安装： apt-get install coreutils命令格式： shred [ 选项 ]… 文件 … 长选项必须使用的参数对于短选项时也是必需使用的。 -f, –force 必要时修改权限以使目标可写 -n, –iterations=N 覆盖 N 次，而非使用默认的 3 次 --random-source= 文件 从指定文件中取出随机字节 -s, –size=N 粉碎数据为指定字节的碎片 -u, –remove 覆盖后截断并删除文件 -v, –verbose 显示详细信息 -x, –exact 不将文件大小增加至最接近的块大小 -z, –zero 最后一次使用 0 进行覆盖以隐藏覆盖动作 应用实例： 使用方法举例如下： 粉碎一个名为 test.txt 的文件命令是： $shred –u test.txt 粉碎多个文件的命令是： $shred –u test1.txt test2.txt 覆盖 IDE 接口的第一个磁盘设备的第一分区 $shred /dev/hda0 覆盖 RAID 分区 $ shred -vfz -n 10 /dev/md1使用 wipe wipe 使用 gutmann 方式，它的理论依据是 1996 年奥克兰大学计算机科学学院皮特 . 古特曼教授在第六届 usenix 安全会议上所作的论文，《安全删除磁固存储器上的数据》 http://www.cs.auckland.ac.nz/~pgut001/pubs/secur_del.html 。这是迄今为止最安全的数据删除方法，覆盖数据 35 次使得任何还原数据的企图都是徒劳的。 wipe 采用了重复写上 34 次以随机数生成数据的 gutmann 方式，清除的对象可以是单一档案、数据夹和整个硬盘。随着硬盘容量愈来愈大，重写时间也会愈来愈长，所以 wipe 也提供了只重复写入 4 次的快速模式。 首先安装： #apt-get install wipe使用方法举例如下： 删除一个文件，如需对某个机密的文件进行安全删除，您可以执行以下命令： #wipe file.txt删除目录， wipe 也支持对目录进行安全删除操作，您只需添加 r 选项即可，例如： #wipe -r /home/user/test/删除整个分区， wipe 也支持对分区例如： wipe /dev/sdb1 使用 secure-delete 软件包 secure-delete 软件包简介secure-delete 软件包包含一些安全删除工具，这些工具能够安全清除文件数据、释放磁盘空间、交换分区和内存。 secure-delete 软件包中包含下列命令： srm(secure remove) – 用于安全删除硬盘上现有的文件或者目录。 sdmem(secure memory wiper) – 用于清除计算机内存 (ram) 的数据痕迹。 sfill(secure free space wiper) – 用于清除磁盘可用空间的数据痕迹。 sswap(secure swap wiper) – 用于删除交换区所有数据痕迹。 安装 secure-delete 软件包在 Ubuntu 中安装 secure-delete 工具，需要运行下列命令： #apt-get install secure-delete 使用 srm 命令 srm 通过覆盖、重命名和 unlink 前截断数据来删除指定的文件，这可以防止其他人利用命令恢复或复原文件。 srm 命令格式：srm [-d] [-f] [-l] [-l] [-r] [-v] [-z]选项-d 忽略(与 rm 的兼容性)-r, -R, –recursive 递归地移除目录内容-f 快速模式(即不安全模式)-l 降低安全性模式。-l -l 再次降低安全性模式。-v 详细模式-z, –zero 覆盖文件后，文件使用的 zero 块应用实例：使用 rm 删除一个文件： #rm myfile.txt使用 srm 删除一个文件： #srm -r myfiles 使用 sdmem 命令 sdmem （ Secure memory wiper 安全内存擦除器）可以删除以内存的数据，使数据不能被黑客恢复。 smem 命令格式： smem [-f] [-l] [-l] [-v] 选项： -f 快速模式(即不安全模式) -l 降低安全性模式。 -l -l 再次降低安全性模式。 -v 详细模式 应用实例： 使用详细模式删除内存的数据 #sdmem –v ##使用 sfill 命令 sfill （ secure free space wipe ）可用空间擦除命令可以删除在所有可用空间上的数据。 sfill 命令格式： sfill [-f] [-i] [-i] [-l] [-l] [-v] [-z] directory/mountpoint 选项 f 快速 ( 和不安全模式 ) -i 仅清除可用 inode 空间，而不是可用磁盘空间 -i 仅清除可用磁盘空间，而不是可用 inode 空间 -l - 降低安全性。 -l -l 再次降低了安全性： -v - 详细模式 -z – 使用 0 擦除最后的写入，而不是随机数据 directory/mountpoint 是在文件系统中用户所创建的文件的位置，位于用户想写入的分区。 应用实例： 使用详细模式可用空间一个目录的可用空间 #sfill -v /cjh1/ 使用 sswap 命令 sswap（secure swap wiper）安全交换分区擦除器可以删除以安全方式存在于 swap 空间的数据。 sswap 命令格式：sswap [-f] [-l] [-l] [-v] [-z] swapdevice 选项 -f 快速模式(即不安全模式) -l 降低安全性。 -l -l 再次降低了安全性。 -v 详细模式 -z - 使用 0 擦除最后的写入，而不是随机数据 应用实例： 在开始使用 sswap 前，您必须禁用 swap 分区，可以使用下列命令来查看安装的 swap 设备： #cat /proc/swaps使用下列命令禁用 swap ： #swapoff /dev/sda3/dev/sda3 – 这是我的 swap 设备 禁用 swap 设备后，就可以使用下列命令用 sswap 擦除它： #sswap /dev/sda3完成上述命令后，需要使用下列命令重新启用 swap ： #swapon /dev/sda3]]></content>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux下批量重命名文件]]></title>
+    <url>%2F2019%2F07%2F16%2Flinux%E4%B8%8B%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[我们在编写程序时，往往希望读入的这些数据集的文件名是一种更简洁的形式，比如按照索引(index)方式：1.mp4，2.mp4，3.mp4…，那么如何批量重命名一个文件夹下的文件名呢？方法很简单，只需要在linux的终端Terminal里面进入数据集的当前文件夹里面，直接输入以下命令即可： i=1; for x in *; do mv $x $i.mp4; let i=i+1; done 一个命令就可以解决了，快不快，惊不惊喜。]]></content>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu-linux挂载、卸载及格式化U盘]]></title>
+    <url>%2F2019%2F07%2F16%2FUbuntu-linux%E6%8C%82%E8%BD%BD%E3%80%81%E5%8D%B8%E8%BD%BD%E5%8F%8A%E6%A0%BC%E5%BC%8F%E5%8C%96U%E7%9B%98%2F</url>
+    <content type="text"><![CDATA[1 找出U盘所在分区 不插U盘执行sudo fdisk -l 输入密码回车插上U盘执行sudo fdisk -l多出来的那一块就是U盘所在分区这里以我U盘所在分区 /dev/sdb4为例2 挂载U盘sudo mount /dev/sdb4 /mnt(这里表示将U盘挂载在mnt目录下） 3 卸载U盘sudo umount /dev/sdb4 4 将U盘格式化为fat32格式 sudo mkfs.vfat /dev/sdb4 将U盘格式化为ntfs格式 sudo mkfs.ntfs /dev/sdb4]]></content>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ubuntu下添加交换空间]]></title>
+    <url>%2F2019%2F07%2F16%2Fubuntu%E4%B8%8B%E6%B7%BB%E5%8A%A0%E4%BA%A4%E6%8D%A2%E7%A9%BA%E9%97%B4%2F</url>
+    <content type="text"><![CDATA[wap查看交换空间情况mkdir swapcd swapsudo dd if=/dev/zero of=swapfile bs=1024 count=4000000count为总量，这里正好为4g启用交换空间sudo swapon swapfile设置权限 sudo chmod 600 swapfile设置自启动 sudo gedit /etc/fstab添加一行: /home/lake/swap swap defaults 0 0最后free -m 查看交换空间情况]]></content>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+</search>
